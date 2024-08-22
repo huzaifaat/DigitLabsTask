@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}My Site{% endblock %}</title>
+        <!-- Load static files template tag -->
+        {% load static %}
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body class="bg-gray-100">
+        {% block content %}
+        <!-- Page-specific content will go here -->
+        {% endblock %}
+    </body>
+</html>

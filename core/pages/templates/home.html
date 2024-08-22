@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Task 1{% endblock %} {% block content %}
+<div class="grid grid-cols-3 gap-4 min-h-screen p-10">
+    <!-- First Column: Items -->
+    <div class="bg-white p-4 border border-gray-300 rounded-lg h-[450px] overflow-y-auto">
+        <h2 class="text-lg font-semibold mb-2">Items</h2>
+        <ul id="column1" class="space-y-2">
+            <!-- Items will be dynamically injected here -->
+        </ul>
+    </div>
+
+    <!-- Second Column: Focus Area -->
+    <div class="bg-white p-4 border border-gray-300 rounded-lg h-[450px] overflow-y-auto">
+        <h2 class="text-lg font-semibold mb-2">Focus Column</h2>
+        <div id="column2" class="space-y-2"></div>
+    </div>
+
+    <!-- Third Column: Boxes -->
+    <div class="bg-white p-4 border border-gray-300 rounded-lg h-[450px] overflow-y-auto">
+        <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold mb-2">Number of Boxes</h2>
+            <div
+                class="add-box flex items-center text-green-500 cursor-pointer hover:text-green-700"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                <span class="ml-1">Add Box</span>
+            </div>
+        </div>
+        <div id="column3" class="space-y-2"></div>
+    </div>
+</div>
+
+<!-- Include your JavaScript for dynamic content and interactions -->
+<script src="{% static 'js/task1.js' %}"></script>
+{% endblock %}
